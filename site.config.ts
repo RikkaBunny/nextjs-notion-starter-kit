@@ -19,6 +19,7 @@ export default siteConfig({
   // social usernames (optional)
   //twitter: 'transitive_bs',
   github: 'RikkaBunny',
+  
   //linkedin: 'fisch2',
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   newsletter: 'https://www.zhihu.com/people/bunny-92-66', // optional newsletter URL
