@@ -5,7 +5,7 @@ on:
     - cron: "0 * * * *"
 
 jobs:
-  update_time:
+  build:
     runs-on: ubuntu-latest
 
     steps:
