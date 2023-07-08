@@ -19,7 +19,7 @@ jobs:
       - name: Set up Git
         run: |
           git config --global user.name "RikkaBunny"
-          git config --global user.email "nextjs-notion-starter-kit"
+          git config --global user.email "974296707@qq.com"
 
       - name: Update time
         run: |
