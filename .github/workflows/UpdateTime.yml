@@ -12,23 +12,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Set up Git
-        run: |
-          git config --global user.name "RikkaBunny"
-          git config --global user.email "974296707@qq.com"
+          GITHUB_TOKEN: ${{ github.token }}
 
       - name: Update time.txt
         run: |
           echo $(date +"%Y-%m-%d %H:%M:%S") > time.txt
-
-      - name: Commit and push changes
+      - name: Commit files
         run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add time.txt
           git commit -m "Update time.txt"
-          git push
-          
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
+
