@@ -20,8 +20,8 @@ jobs:
           echo $(date +"%Y-%m-%d %H:%M:%S") > time.txt
       - name: Commit files
         run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          git config --global user.email "974296707@qq.com"
+          git config --global user.name "RikkaBunny"
           git add time.txt
           git commit -m "Update time.txt"
       - name: Push changes
