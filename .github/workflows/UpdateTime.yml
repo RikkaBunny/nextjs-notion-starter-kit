@@ -11,7 +11,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Set up Git
         run: |
           git config --global user.name "RikkaBunny"
@@ -26,6 +27,7 @@ jobs:
           git add time.txt
           git commit -m "Update time.txt"
           git push
+          
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
