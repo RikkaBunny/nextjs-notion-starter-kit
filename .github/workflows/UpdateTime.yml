@@ -24,6 +24,12 @@ jobs:
       - name: Update time
         run: |
           echo $(date) > time.txt
+      - name: Commit and push changes
+        run: |
+          git add time.txt
+          git commit -m "Update time.txt"
+          git push
+          
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
