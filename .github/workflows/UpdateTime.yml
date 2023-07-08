@@ -12,18 +12,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-        with:
-          GITHUB_TOKEN: ${{ github.token }}
 
-      - name: Update time.txt
+      - name: Set up Git
         run: |
-          echo $(date +"%Y-%m-%d %H:%M:%S") > time.txt
-      - name: Commit files
-        run: |
-          git config --global user.email "974296707@qq.com"
           git config --global user.name "RikkaBunny"
-          git add time.txt
-          git commit -m "Update time.txt"
+          git config --global user.email "nextjs-notion-starter-kit"
+
+      - name: Update time
+        run: |
+          echo $(date) > time.txt
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
